@@ -1,0 +1,62 @@
+html {
+  font-family: "latolight";
+  font-size: 18px;
+  line-height: 29px;
+  letter-spacing: -0.005em;
+  color: rgb(24, 24, 24);
+}
+
+h1 {
+  font-family: "ubuntulight";
+  font-size: 39px;
+  line-height: 34px;
+  letter-spacing: -0.005em;
+  font-weight: normal;
+  position: relative;
+  margin-bottom: 60px;
+  margin-top: 96px;
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 84px;
+    height: 3px;
+    background: #a2222f;
+    margin-top: 25px;
+  }
+}
+
+h2 {
+  font-family: "ubuntumedium";
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: -0.005em;
+  font-weight: normal;
+}
+
+#menu {
+  font-family: "proxima_nova_ltsemibold";
+  font-size: 14px;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+#footer {
+  font-family: "latoregular";
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: -0.005em;
+}
+
+.fader {
+  font-family: 'gothamprolight';
+  font-size: 31px;
+  line-height: 45px;
+  color: white;
+  text-shadow: 0.707px 0.707px 2px rgba(2, 2, 3, 0.275);
+  text-transform: uppercase;
+}
+
+p {
+  margin-top: 0px;
+}

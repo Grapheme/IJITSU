@@ -1,0 +1,104 @@
+extends layout.jade
+
+block vars
+ - var bodyClass = "index";
+ 
+block content
+  .fader
+    .unit(style="background-image:url('images/visual-slide-1.png');")
+      img.visual(src="images/logo-text.png")
+      .text.
+        колесные диски <br>
+        с японским сердцем
+    .unit(style="background-image:url('images/visual-slide-2-tmp.jpg');")
+      img.visual(src="images/logo-text.png")
+      .text.
+        колесные диски <br>
+        с японским сердцем
+        
+  .content.col-2
+    .holder
+      h1 Отличайся выгодно
+      .col
+        p.
+          Диски <strong>IJITSU</strong> (&laquo;Иджитсу&raquo;) производят на&nbsp;крупном заводе
+          в&nbsp;Восточной Азии по&nbsp;японским стандартам и&nbsp;на&nbsp;новейшем
+          европейском оборудовании. Благодаря этому диски отличаются лаконичным дизайном в&nbsp;традициях
+          азиатской культуры, а&nbsp;технические характеристики соответствуют самым строгим международным нормам.
+      .col
+        p. 
+          Восточные традиции нашли отражение и&nbsp;в&nbsp;названии бренда,
+          которое состоит из&nbsp;иероглифов (И)&nbsp;&mdash; необычный,
+          отличающийся от&nbsp;других, и&nbsp;(Джитсу)&nbsp;&mdash; выгодный.
+          
+  .content.col-3.red-bg
+    .holder
+      .col
+        .icon
+          include svg/like.html
+        h2 Качество
+        p.
+          Диски IJITSU проходят многоступенчатую проверку качества
+          на&nbsp;каждом этапе производства. Постоянный контроль
+          состава металла, температуры плавления и&nbsp;устойчивости
+          к&nbsp;внешнему воздействию гарантируют отличные
+          эксплуатационные характеристики дисков.
+      .col
+        .icon
+          include svg/wheel.html
+        h2 Стиль
+        p.
+          Литые диски IJITSU на&nbsp;12% легче аналогов.
+          Это дает преимущество при разгоне и&nbsp;торможении, улучшает
+          управляемость автомобиля и&nbsp;позволяет снизить расход топлива.
+          А&nbsp;разнообразие дизайнерских решений в&nbsp;линейке IJITSU поможет
+          выделиться на&nbsp;дороге даже сторонникам сдержанного стиля.
+      .col
+        .icon
+          include svg/wallet.html
+        h2 Выгода
+        p.
+          Еще одно преимущество дисков IJITSU&nbsp;&mdash;
+          демократичная цена. Автоматизация большинства производственных
+          процессов позволяет производителю предлагать диски на&nbsp;максимально
+          выгодных для покупателей условиях без компромиссов в&nbsp;качестве.
+          
+  .content.with-teaser
+    .holder
+      .text.
+        Диски <strong>IJITSU</strong> довольно быстро нашли своего
+        покупателя благодаря отличным эксплуатационным
+        характеристикам, оригинальному дизайну и&nbsp;демократичной
+        цене. За&nbsp;7 лет присутствия на&nbsp;рынке России было продано
+        более миллиона дисков, что говорит о&nbsp;бесспорной симпатии среди
+        автомобилистов.
+      img.visual(src="images/visual-car-index.jpg")
+  
+  .content.col-4
+    .holder
+      h1 Наши лучшие модели
+      .wrapper
+        a.col(href="")
+          img.visual(src="images/visual-disc-1.png")
+          .shadow
+          h2 IJITSU 1122
+        a.col(href="")
+          img.visual(src="images/visual-disc-2.png")
+          .shadow
+          h2 IJITSU 1218
+        a.col(href="")
+          img.visual(src="images/visual-disc-1.png")
+          .shadow
+          h2 IJITSU 1122
+        a.col(href="")
+          img.visual(src="images/visual-disc-2.png")
+          .shadow
+          h2 IJITSU 1218
+        a.col(href="")
+          img.visual(src="images/visual-disc-1.png")
+          .shadow
+          h2 IJITSU 1122
+        a.col(href="")
+          img.visual(src="images/visual-disc-2.png")
+          .shadow
+          h2 IJITSU 1218

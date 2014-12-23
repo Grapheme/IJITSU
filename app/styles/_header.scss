@@ -1,0 +1,32 @@
+#header {
+  background-color: rgb(38, 35, 36);
+  height: 100px;
+  width: 100%;
+  min-width: 960px;
+  border-bottom: 3px solid white;
+  .logo {
+    margin-left: 61px;
+    margin-top: 13px;
+    text-decoration: none;
+    float: left;
+    img {
+      width: 271px;
+      height: 72px;
+    }
+  }
+  #menu {
+    float: right;
+    position: relative;
+    top: 35px;
+    right: 28px;
+    a {
+      float: left;
+      text-decoration: none;
+      color: #f4f4f4;
+      margin: 0 38px;
+      &.active, &:hover {
+        border-bottom: 3px solid #a2222f;
+      }
+    }
+  }
+}
