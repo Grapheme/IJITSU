@@ -1,0 +1,42 @@
+body.about {
+  .fader {
+    height: 300px;
+    .unit {
+      padding-top: 76px;
+      .visual {
+        width: 208px;
+      }
+    }
+  }
+  .content {
+    &.visual-left {
+      color: white;
+      &>.holder {
+        padding-bottom: 12px;
+        .visual {
+          width: 255px;
+          margin-left: 100px;
+          margin-right: 112px;
+          vertical-align: top;
+          position: relative;
+          top: -36px;
+        }
+        .text {
+          display: inline-block;
+          width: 688px;
+          vertical-align: top;
+          margin-top: 40px;
+        }
+        @include max-screen(1220px) {
+          width: 900px;
+          .visual {
+            margin-left: 0;
+          }
+          .text {
+            width: 528px;
+          }
+        }
+      }
+    }
+  }
+}

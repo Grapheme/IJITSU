@@ -10,6 +10,8 @@
   }
   &.red-bg {
     background-color: #a2222f;
+    color: white;
+    text-shadow: 0.707px 0.707px 2px rgba(2, 2, 3, 0.275);
   }
   &.col-2 {
     &>.holder {
@@ -26,7 +28,7 @@
         width: 900px;
         .col {
           width: 420px;
-          &:first-of-type {
+          &:nth-child(odd) {
             margin-right: 55px;
           }
         }
@@ -38,8 +40,6 @@
       .col {
         width: 300px;
         text-align: center;
-        color: white;
-        text-shadow: 0.707px 0.707px 2px rgba(2, 2, 3, 0.275);
         padding-bottom: 122-18px;
         padding-top: 90px;
         display: inline-block;
