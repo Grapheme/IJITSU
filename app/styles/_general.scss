@@ -1,3 +1,8 @@
+.iwinow {
+  line-height: 1.35;
+  overflow: hidden;
+  white-space: nowrap;
+}
 .content {
   width: 100%;
   min-width: 960px;
@@ -28,7 +33,7 @@
         width: 900px;
         .col {
           width: 420px;
-          &:nth-child(odd) {
+          &:first-of-type {
             margin-right: 55px;
           }
         }
@@ -162,6 +167,11 @@
           right: 0;
         }
       }
+    }
+  }
+  &.mini-padding {
+    &>.holder {
+      padding-bottom: 20px;
     }
   }
 }

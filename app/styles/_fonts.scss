@@ -47,6 +47,18 @@
 }
 
 @font-face {
+  font-family: 'latoregular';
+  src: url('../fonts/lato-bold-webfont.eot');
+  src: url('../fonts/lato-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/lato-bold-webfont.woff2') format('woff2'),
+       url('../fonts/lato-bold-webfont.woff') format('woff'),
+       url('../fonts/lato-bold-webfont.ttf') format('truetype'),
+       url('../fonts/lato-bold-webfont.svg#latobold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'latolight';
   src: url('../fonts/lato-semibold-webfont.eot');
   src: url('../fonts/lato-semibold-webfont.eot?#iefix') format('embedded-opentype'),

@@ -1,0 +1,39 @@
+body.contacts {
+  .content {
+    &.contacts-block {
+      padding-top: 48px;
+      padding-bottom: 94px;
+      &>.holder {
+        .subject {
+          margin-right: 32px;
+          width: 258px;
+          h2 {
+            font-family: 'latoregular';
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 0.005em;
+          }
+          .unit {
+            line-height: 23px;
+            margin-bottom: 23px;
+          }
+        }
+        @include max-screen(1240px) {
+          width: 900px;
+          .subject {
+            margin-right: 16px;
+            width: 284px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#contacts-map {
+  width: 100%;
+  height: 505px;
+  border-bottom: 3px solid #a2222f;
+  border-top: 3px solid #a2222f;
+}

@@ -33,6 +33,8 @@ html(class="#{bodyClass} no-js")
 
     include includes/footer.jade
 
+    script(src='http://maps.google.com/maps/api/js?sensor=false')
+
     // build:js scripts/vendor.js
     // bower:js
     script(src='../bower_components/jquery/dist/jquery.js')
@@ -40,6 +42,8 @@ html(class="#{bodyClass} no-js")
     // endbuild
 
     // build:js scripts/main.js
+    script(src='scripts/masonry.pkgd.min.js')
     script(src='scripts/main.js')
     script(src='scripts/fader.js')
+    script(src='scripts/contacts.js')
     // endbuild
