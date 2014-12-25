@@ -22,6 +22,11 @@ gulp.task('jshint', function () {
     .pipe($.jshint.reporter('fail'));
 });
 
+gulp.task('json', function () {
+  return gulp.src('app/json')
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('html', ['views', 'styles'], function () {
   var assets = $.useref.assets({searchPath: '{.tmp,app}'});
 
@@ -55,6 +60,7 @@ gulp.task('extras', function () {
   return gulp.src([
     'app/*.*',
     '!app/*.jade',
+    //'app/json',
     'node_modules/apache-server-configs/dist/.htaccess'
   ], {
     dot: true
@@ -122,7 +128,7 @@ gulp.task('watch', ['connect'], function () {
   gulp.watch('bower.json', ['wiredep']);
 });
 
-gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'extras'], function () {
+gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'extras', 'json'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

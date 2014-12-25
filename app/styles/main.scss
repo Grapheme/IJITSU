@@ -13,11 +13,17 @@ html {
   min-width: 960px;
 }
 
+.clrfx {
+  clear: both;
+}
+
 @import 'fonts';
 @import 'text';
 @import 'header';
 @import 'fader';
 @import 'general';
+@import 'index';
 @import 'about';
 @import 'contacts';
+@import 'catalog';
 @import 'footer';

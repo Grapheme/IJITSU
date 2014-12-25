@@ -129,8 +129,19 @@
         }
       }
       @include max-screen(1260px) {
-        width: 844px;
+        width: 900px;
         overflow: hidden;
+        .wrapper {
+          margin: 0 -16px;
+          .col {
+            width: 200px;
+            margin-left: 16px;
+            margin-right: 16px;
+            .visual {
+              width: 200px;
+            }
+          }
+        }
       }
     }
   }

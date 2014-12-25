@@ -1,5 +1,5 @@
 .fader {
-  height: 487px;
+  height: 300px;
   position: relative;
   background: black;
   .unit {
@@ -8,7 +8,7 @@
     background-size: cover;
     background-position: center center;
     padding-left: 60px;
-    padding-top: 140px;
+    padding-top: 76px;
     box-sizing: border-box;
     position: absolute;
     @include prefixer(filter, brightness(0) contrast(7) saturate(0.5) opacity(0), webkit spec);
@@ -16,6 +16,9 @@
     opacity: 0;
     @include transition(all 2s ease-in-out);
     @include user-select(none);
+    .visual {
+      width: 208px;
+    }
     .text {
       margin-top: 27px;
       cursor: default;
