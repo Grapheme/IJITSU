@@ -4,6 +4,7 @@
   border-bottom: 3px solid #a2222f;
   background: white;
   position: relative;
+  min-width: 960px;
   .mark {
     width: 15px;
     height: 15px;
@@ -101,6 +102,19 @@
               vertical-align: top;
             }
           }
+        }
+      }
+    }
+  }
+  @include max-screen(1210px) {
+    .detail {
+      &>.holder {
+        width: 900px;
+        .left {
+          margin-right: 50px;
+        }
+        .right {
+          width: 514px;
         }
       }
     }
