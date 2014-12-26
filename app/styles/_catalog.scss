@@ -1,22 +1,27 @@
+.mark {
+  width: 15px;
+  height: 15px;
+  border-top: 3px solid #a2222f;
+  border-left: 3px solid #a2222f;
+  background: white;
+  @include transform(rotate(45deg));
+  position: absolute;
+  //top: -11px;
+  margin-top: -8px;
+  z-index: 50;
+  left: -50px;
+  @include transition(all 500ms cubic-bezier(0.075, 0.820, 0.165, 1.000));
+  //opacity: 0;
+}
 .detail-view {
+  transform: translateZ(0);
   display: none;
   border-top: 3px solid #a2222f;
   border-bottom: 3px solid #a2222f;
   background: white;
   position: relative;
   min-width: 960px;
-  .mark {
-    width: 15px;
-    height: 15px;
-    border-top: 3px solid #a2222f;
-    border-left: 3px solid #a2222f;
-    background: white;
-    @include transform(rotate(45deg));
-    position: absolute;
-    top: -11px;
-    left: 0px;
-    @include transition(all 1000ms cubic-bezier(0.075, 0.820, 0.165, 1.000));
-  }
+  //@include transition(all 500ms cubic-bezier(0.075, 0.820, 0.165, 1.000));
   .detail {
     padding-top: 32px;
     &>.holder {
@@ -122,7 +127,7 @@
 }
 
 body.catalog {
-  background-image: url("../images/bg-tilt-lines.png");
+  //background-image: url("../images/bg-tilt-lines.png");
   .content {
     background-image: none;
     &.col-4 {

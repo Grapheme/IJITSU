@@ -15,7 +15,7 @@ $(function() {
       $(this).addClass('active');
       
       var $detail = $(this).find('.detail').clone(),
-          $detailContainer = $(this).closest('.content').next('.detail-view'),
+          $detailContainer = $(this).closest('.content').next('.mark').next('.detail-view'),
           $colors = $detail.find('.colors .unit'),
           $bigImg = $detail.find('.left .visual img').eq(0),
           $closeBtn = $detail.find('.close'),
@@ -40,13 +40,26 @@ $(function() {
         $colors.eq(0).click();
         
         $closeBtn.click(function(){
-          detailClose(function(){});
+          $('.mark').css({
+            'left': -50
+          });
+          detailClose(function(){
+            $('body.catalog .content a.col').removeClass('active');
+          });
         });
         
-        $detailContainer.find('.mark').css({
-          'left': leftPx
+        $detailContainer.prev('.mark').css({
+          'left': leftPx,
+          'opacity': 1
         });
         $detailContainer.slideDown(500);
+      });
+    } else {
+      $('.mark').css({
+        'left': -50
+      });
+      detailClose(function(){
+        $('body.catalog .content a.col').removeClass('active');
       });
     }
     

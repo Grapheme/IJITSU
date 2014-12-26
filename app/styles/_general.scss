@@ -1,3 +1,6 @@
+body {
+  background-image: url("../images/bg-tilt-lines.png");
+}
 .iwinow {
   line-height: 1.35;
   overflow: hidden;
@@ -6,7 +9,7 @@
 .content {
   width: 100%;
   min-width: 960px;
-  background-image: url('../images/bg-tilt-lines.png');
+  //background-image: url('../images/bg-tilt-lines.png');
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   &>.holder {
@@ -15,6 +18,7 @@
   }
   &.red-bg {
     background-color: #a2222f;
+    background-image: url("../images/bg-tilt-lines.png");
     color: white;
     text-shadow: 0.707px 0.707px 2px rgba(2, 2, 3, 0.275);
   }
@@ -98,6 +102,7 @@
         .col {
           text-align: center;
           display: inline-block;
+          vertical-align: top;
           width: 224px;
           text-decoration: none;
           color: inherit;
