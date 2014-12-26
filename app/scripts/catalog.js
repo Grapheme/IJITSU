@@ -6,6 +6,13 @@ $(function() {
       $('.detail-view.active').find('.detail').remove();
       $('.detail-view').removeClass('active');
       callback();
+      $('.detail-view').each(function(){
+        if (!$(this).is('.active')) {
+          $(this).prev('.mark').css({
+            'left': -50
+          });
+        }
+      });
     });
   }
   
