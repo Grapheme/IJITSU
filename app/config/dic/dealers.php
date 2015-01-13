@@ -25,8 +25,20 @@ return array(
                 #'values' => array('Выберите..') + $lists['dealer_regions'], ## Используется предзагруженный словарь
                 'values' => $lists['dealer_regions'], ## Используется предзагруженный словарь
             ),
+            'city' => array(
+                'title' => 'Город/Населенный пункт',
+                'type' => 'text',
+            ),
             'address' => array(
                 'title' => 'Адрес',
+                'type' => 'text',
+            ),
+            'lat' => array(
+                'title' => 'Широта',
+                'type' => 'text',
+            ),
+            'lng' => array(
+                'title' => 'Долгота',
                 'type' => 'text',
             ),
             'phones' => array(
@@ -105,26 +117,6 @@ return array(
             Config::set('temp.index_dics_lists', $lists);
             #Helper::dd($lists);
 
-
-            /**
-             * Создаем списки из полученных данных
-             */
-            $dic_ids = Dic::makeLists($dics, false, 'id');
-            #Helper::d($dic_ids);
-            $dicval_ids = Dic::makeLists($dicvals, false, 'id');
-            #Helper::d($dicval_ids);
-
-            /**
-             * Получаем количество необходимых нам данных, одним SQL-запросом.
-             * Сохраняем данные в конфиг - для дальнейшего использования в функции-замыкании actions (см. выше).
-             */
-            #/*
-            $counts = array();
-            if (count($dic_ids) && count($dicval_ids))
-                $counts = DicVal::counts_by_fields($dic_ids, array('region_id' => $dicval_ids));
-            #Helper::dd($counts);
-            Config::set('temp.index_counts', $counts);
-            #*/
         },
     ),
 );

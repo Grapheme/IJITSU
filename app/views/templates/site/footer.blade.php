@@ -4,17 +4,10 @@
  */
 ?>
 
-            <footer class="main-footer">
-                <div class="copy">
-                    ©
-                    {{ trans('interface.footer.copyright') }}
-                    2014{{ date('Y')>2014 ? '-'.date('Y') : '' }}
-                </div>
-                <address>
-                    {{ trans('interface.footer.address') }}
-                </address>
-                <div class="dev">
-                    {{ trans('interface.footer.made_by_grapheme') }}
-                </div>
-            </footer>
-        </div>
+<div id="footer">
+    <div class="c">
+        Все права защищены &copy; <span class="curent-year"></span>, группа компаний
+        <a href="http://www.virbacavto.ru/" target="_blank">ВИРБАК</a>
+    </div>
+    <div class="dev">Сделано в <a href="http://grapheme.ru/" target="_blank">Графема</a></div>
+</div>
