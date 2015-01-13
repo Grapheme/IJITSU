@@ -46,9 +46,9 @@ foreach ($dealers as $dealer) {
     $temp[$dealer->region_id][$dealer->id] = $dealer;
 
     $emails = array();
-    $temp = explode("\n", $dealer->emails . "\n");
-    if (count($temp)) {
-        foreach ($temp as $email) {
+    $temp2 = explode("\n", $dealer->emails . "\n");
+    if (count($temp2)) {
+        foreach ($temp2 as $email) {
             $email = trim($email);
             if (!$email)
                 continue;
@@ -64,6 +64,7 @@ foreach ($dealers as $dealer) {
 }
 $dealers = $temp;
 unset($temp);
+unset($emails);
 #Helper::tad($dealers);
 ?>
 @extends(Helper::layout())
