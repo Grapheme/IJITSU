@@ -5,7 +5,7 @@
 ?>
 <div id="header"><a href="index.html" class="logo"><img src="{{ Config::get('site.theme_path') }}/images/logo-main.png"></a>
 
-    <div id="menu">
+    <div id="menu__">
         {{ Menu::placement('main_menu') }}
     </div>
 
