@@ -7,6 +7,7 @@
 
     {{ Menu::placement('main_menu') }}
 
+    {{--
     <div id="menu">
         <a href="index.html" class="active">
             <div class="label">Главная</div>
@@ -18,4 +19,5 @@
             <div class="label">Где купить</div>
         </a>
     </div>
+    --}}
 </div>
