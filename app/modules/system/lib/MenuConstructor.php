@@ -396,11 +396,26 @@ class MenuConstructor {
         #return false;
 
         /**
+         * Собственное правило для определения активности пункта меню
+         * Проверка текущего URL на соответствие шаблону регулярного выражения
+         */
+        if (@$element['use_active_regexp'] && @$element['active_regexp']) {
+            #Helper::dd(Request::path());
+            #Helper::dd($element['active_regexp']);
+            #Helper::dd(preg_match($element['active_regexp'], Request::path()));
+            return @(bool)preg_match($element['active_regexp'], Request::path());
+        }
+
+        /**
          * Возвращаем пометку об активности ссылки, в зависимости от типа элемента меню
          */
         switch(@$element['type']) {
 
             case 'page':
+                #Helper::tad($this->pages[$element['page_id']]);
+                if ($this->pages[$element['page_id']]->start_page) {
+                    return $this->isRoute('mainpage', $this->pages[$element['page_id']]->slug);
+                }
                 return $this->isRoute('page', $this->pages[$element['page_id']]->slug);
                 break;
 
