@@ -125,21 +125,26 @@ unset($temp);
                         }
                     }
                     ?>
-                --><a id="id-1" href="" class="col"><img src="{{ $image_thumb }}" class="visual">
+                --><a id="id-1" href="" class="col">
+                    <div style="background-image:url('{{ $image_thumb }}');" class="visual"></div>
                     <div class="shadow"></div>
                     <h2>{{ $wheel->name }}</h2>
                     <div class="detail">
                         <div class="holder"><img src="{{ Config::get('site.theme_path') }}/images/ico-cross.png" class="close">
                             <h2>{{ $wheel->name }}</h2>
                             <div class="left">
-                                <div class="visual"><img src="{{ $image_thumb }}" class="show"><img src="{{ Config::get('site.theme_path') }}/images/decor-shadow-big.png" class="shadow"></div>
+                                <div class="visual">
+                                    <div style="background-image:url('{{ $image_thumb }}');" class="show"></div>
+                                    <img src="{{ Config::get('site.theme_path') }}/images/decor-shadow-big.png" class="shadow">
+                                </div>
                             </div>
                             <div class="right">
                                 @if (count($colors_images))
                                 <h2>Цвета</h2>
                                 <div class="colors">
                                     @foreach ($colors_images as $color)
-                                    <div data-big-img="{{ $color->image->full() }}" class="unit"><img src="{{ $color->image->thumb() }}">
+                                    <div data-big-img="{{ $color->image->full() }}" class="unit">
+                                        <div style="background-image:url('{{ $color->image->thumb() }}');" class="visual"></div>
                                         <div class="title">{{ $color->name }}</div>
                                     </div>
                                     @endforeach

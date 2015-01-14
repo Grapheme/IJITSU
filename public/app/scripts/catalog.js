@@ -24,7 +24,7 @@ $(function() {
       var $detail = $(this).find('.detail').clone(),
           $detailContainer = $(this).closest('.content').next('.mark').next('.detail-view'),
           $colors = $detail.find('.colors .unit'),
-          $bigImg = $detail.find('.left .visual img').eq(0),
+          $bigImg = $detail.find('.left .visual div').eq(0),
           $closeBtn = $detail.find('.close'),
           leftPx = $(this).offset().left+100;
           
@@ -40,7 +40,9 @@ $(function() {
           $(this).addClass('active');
           var src = $(this).attr('data-big-img');
           $('<img src="'+src+'">').load(function(){
-            $bigImg.attr('src', src).addClass('show');
+            $bigImg.css({
+              'background-image':'url('+src+')'
+            }).addClass('show');
           });
         });
         
