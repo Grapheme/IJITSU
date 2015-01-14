@@ -1,6 +1,7 @@
 /*global google */
 /*global console */
-/* jshint devel:true, unused:false */
+/*global _IJITSU_ */
+/* jshint devel:true, unused:false, camelcase: false */
 
 $(function() {
   'use strict';
