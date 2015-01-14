@@ -17,3 +17,6 @@
         {{ HTML::stylemod(Config::get('site.theme_path').'/styles/main.css') }}
         {{ HTML::scriptmod(Config::get('site.theme_path').'/scripts/vendor/modernizr.js') }}
 
+        <script>
+            var theme_path = '{{ URL::to(Config::get('site.theme_path')) }}'';
+        </script>
