@@ -1,6 +1,7 @@
 /*global google */
 /*global console */
 /*global _IJITSU_ */
+/*global theme_path */
 /* jshint devel:true, unused:false, camelcase: false */
 
 $(function() {
@@ -15,7 +16,7 @@ $(function() {
   
   var bounds = new google.maps.LatLngBounds();
   
-  var markerIcon = { url: '../images/ico-marker.svg'};
+  var markerIcon = { url: theme_path + '/images/ico-marker.svg'};
   
   var mapOptions = {
       zoom: 16,
