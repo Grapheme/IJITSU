@@ -16,27 +16,14 @@
 
 @section('content')
 
-    <div class="fader">
-        <div style="background-image:url('{{ Config::get('site.theme_path') }}/images/visual-slide-3.jpg');" class="unit"><img src="{{ Config::get('site.theme_path') }}/images/logo-text.png" class="visual">
-            <div class="text">
-                колесные диски <br>
-                с японским сердцем
-            </div>
-        </div>
-        <div style="background-image:url('{{ Config::get('site.theme_path') }}/images/visual-slide-1.png');" class="unit"><img src="{{ Config::get('site.theme_path') }}/images/logo-text.png" class="visual">
-            <div class="text">
-                колесные диски <br>
-                с японским сердцем
+    {{ $page->block('fader') }}
 
-            </div>
-        </div>
-    </div>
     <div class="content col-2">
         <div class="holder">
             <h1>Об IJITSU</h1>
             <div class="col">
 
-                {{ $page->block('about')  }}
+                {{ $page->block('about') }}
 
             </div>
         </div>
@@ -46,7 +33,7 @@
             <div class="text">
                 <h2>Производство</h2>
 
-                {{ $page->block('toyota')  }}
+                {{ $page->block('toyota') }}
 
             </div>
         </div>
@@ -56,7 +43,7 @@
             <h1>Производство</h1>
             <div class="col">
 
-                {{ $page->block('production')  }}
+                {{ $page->block('production') }}
 
             </div>
         </div>
@@ -66,7 +53,7 @@
             <h1>Стандарт VIA</h1>
             <div class="col">
 
-                {{ $page->block('about')  }}
+                {{ $page->block('about') }}
 
             </div>
         </div>

@@ -70,17 +70,7 @@ unset($temp);
 
 @section('content')
 
-    <div class="fader">
-        <div style="background-image:url('{{ Config::get('site.theme_path') }}/images/visual-slide-4.jpg');" class="unit">
-            <div class="text">
-                Новая <br>
-                коллекция 2015
-            </div>
-        </div>
-        <div style="background-image:url('{{ Config::get('site.theme_path') }}/images/visual-slide-3.jpg');" class="unit"><img src="{{ Config::get('site.theme_path') }}/images/logo-text.png" class="visual">
-            <div class="text">Пожалуй лучшие диски</div>
-        </div>
-    </div>
+    {{ $page->block('fader') }}
 
     @if (is_object($wheels) && $wheels->count()))
     <div class="content col-4">

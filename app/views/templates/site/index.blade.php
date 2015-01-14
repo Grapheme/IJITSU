@@ -64,25 +64,8 @@ unset($temp);
 
 @section('content')
 
-    <div class="fader">
-        <div style="background-image:url('{{ Config::get('site.theme_path') }}/images/visual-slide-1.png');" class="unit">
-            <img src="{{ Config::get('site.theme_path') }}/images/logo-text.png" class="visual">
+    {{ $page->block('fader') }}
 
-            <div class="text">
-                колесные диски <br>
-                с японским сердцем
-            </div>
-        </div>
-        <div style="background-image:url('{{ Config::get('site.theme_path') }}/images/visual-slide-2-tmp.jpg');" class="unit">
-            <img src="{{ Config::get('site.theme_path') }}/images/logo-text.png" class="visual">
-
-            <div class="text">
-                колесные диски <br>
-                с японским сердцем
-
-            </div>
-        </div>
-    </div>
     <div class="content col-2">
         <div class="holder">
             <h1>Отличайся выгодно</h1>
