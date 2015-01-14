@@ -1,5 +1,7 @@
 /*global google */
 /*global console */
+/*global _IJITSU_ */
+/* jshint devel:true, unused:false, camelcase: false */
 
 $(function() {
   'use strict';
@@ -30,29 +32,24 @@ $(function() {
     var map = new google.maps.Map(document.getElementById('contacts-map'), mapOptions);
   
     var jsonUrl = $('#contacts-map').attr('data-json');
-    
-    $.getJSON(jsonUrl, function(data) {
-      $.each(data, function(index, value){
-        setTimeout(function() {
-          var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(value.lat, value.lng),
-            map: map,
-            animation: google.maps.Animation.DROP,
-            icon: markerIcon,
-          });
-          var infowindow = new google.maps.InfoWindow({
-            content: '<div class="iwinow">' + value.text + '</div>'
-          });
-          
-          google.maps.event.addListener(marker, 'click', function() {
-            infowindow.open(map, marker);
-          });
-          bounds.extend(marker.position);
-          map.fitBounds(bounds);
-        }, index * 300);
-      });
-    }).fail(function() {
-      console.log(arguments);
+    $.each(_IJITSU_.map_json, function(index, value){
+      setTimeout(function() {
+        var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(value.lat, value.lng),
+          map: map,
+          animation: google.maps.Animation.DROP,
+          icon: markerIcon,
+        });
+        var infowindow = new google.maps.InfoWindow({
+          content: '<div class="iwinow">' + value.text + '</div>'
+        });
+        
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map, marker);
+        });
+        bounds.extend(marker.position);
+        map.fitBounds(bounds);
+      }, index * 300);
     });
   }
   

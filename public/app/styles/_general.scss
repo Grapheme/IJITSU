@@ -112,6 +112,11 @@ body {
           .visual {
             position: relative;
             z-index: 100;
+            width: 223px;
+            height: 212px;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
           }
           h2 {
             display: inline-block;

@@ -220,7 +220,8 @@ unset($temp);
                             continue;
                         $image = $image->image;
                     ?>
-                <a href="{{ URL::route('page', 'catalog') }}#id-{{ $wheel->id }}" class="col"><img src="{{ $image->full() }}" class="visual">
+                <a href="{{ URL::route('page', 'catalog') }}#id-{{ $wheel->id }}" class="col">
+                    <div style="background-image:url('{{ $image->full() }}');" class="visual"></div>
                     <div class="shadow"></div>
                     <h2>{{ $wheel->name }}</h2>
                 </a>

@@ -18,7 +18,7 @@ block content
       h1 Каталог
       .wrapper
         a.col#id-1(href="")
-          img.visual(src="images/visual-disc-1.png")
+          .visual(style="background-image:url('images/visual-disc-1.png');")
           .shadow
           h2 IJITSU 1122 IJITSU 1122
           .detail
@@ -27,13 +27,13 @@ block content
               h2 IJITSU 1277
               .left
                 .visual
-                  img.show(src="images/visual-big-disc-1.png")
+                  .show(style="background-image:url('images/visual-big-disc-1.png');")
                   img.shadow(src="images/decor-shadow-big.png")
               .right
                 h2 Цвета
                 .colors
                   .unit(data-big-img="images/visual-big-disc-1.png")
-                    img(src="images/visual-disc-1-small.png")
+                    .visual(style="background-image:url('images/visual-disc-1-small.png');")
                     .title White
                   .unit(data-big-img="http://img.dummy-image-generator.com/abstract/dummy-336x328-Mosque.jpg")
                     img(src="images/visual-disc-1-small.png")

@@ -131,6 +131,6 @@ unset($emails);
 
 @section('scripts')
     <script>
-        var dealers = {{ json_encode($dealers_json) }};
+        _IJITSU_.map_json = {{ json_encode($dealers_json) }};
     </script>
 @stop
