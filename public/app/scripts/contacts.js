@@ -2,7 +2,9 @@
 /*global console */
 /*global _IJITSU_ */
 /*global theme_path */
+/* exported theme_path */
 /* jshint devel:true, unused:false, camelcase: false */
+/*jshint -W038 */
 
 $(function() {
   'use strict';
@@ -17,7 +19,7 @@ $(function() {
   var bounds = new google.maps.LatLngBounds();
   
   if ('undefined' === typeof theme_path) {
-    var theme_path = '/'
+    var theme_path = '/';// jshint ignore:line
   }
   
   var markerIcon = { url: theme_path + '/images/ico-marker.svg'};
