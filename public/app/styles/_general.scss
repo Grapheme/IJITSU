@@ -26,19 +26,35 @@ body {
     &>.holder {
       padding-bottom: 94px;
       .col {
-        width: 518px;
         display: inline-block;
         vertical-align: top;
+        /*width: 518px;
         &:first-of-type {
           margin-right: 118px;
+        }*/
+        @include column-count(2);
+        @include column-width(518px);
+        @include column-gap(118px);
+        p {
+          -webkit-column-break-inside: avoid;
+                    page-break-inside: avoid;
+                         break-inside: avoid;
         }
       }
       @include max-screen(1240px) {
         width: 900px;
         .col {
-          width: 420px;
+          /*width: 420px;
           &:first-of-type {
             margin-right: 55px;
+          }*/
+          @include column-count(2);
+          @include column-width(420px);
+          @include column-gap(55px);
+          p {
+            -webkit-column-break-inside: avoid;
+                      page-break-inside: avoid;
+                           break-inside: avoid;
           }
         }
       }

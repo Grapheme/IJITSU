@@ -107,6 +107,11 @@
           margin-bottom: 66px;
         }
         .models {
+          .left {
+            margin-right: 0 !important;  
+            @include column-count(2);  
+            @include column-gap(50px);
+          }
           .letter-holder {
             margin-bottom: 15px;
             .letter {
