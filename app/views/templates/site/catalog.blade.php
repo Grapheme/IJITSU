@@ -115,7 +115,7 @@ unset($temp);
                         }
                     }
                     ?>
-                --><a id="id-1" href="" class="col">
+                --><a id="id-{{ $wheel->id }}" href="" class="col">
                     <div style="background-image:url('{{ $image_thumb }}');" class="visual"></div>
                     <div class="shadow"></div>
                     <h2>{{ $wheel->name }}</h2>
