@@ -3,7 +3,7 @@
  * TEMPLATE_IS_NOT_SETTABLE
  */
 ?>
-<div id="header"><a href="index.html" class="logo"><img src="{{ Config::get('site.theme_path') }}/images/logo-main.png"></a>
+<div id="header"><a href="{{ URL::route('mainpage') }}" class="logo"><img src="{{ Config::get('site.theme_path') }}/images/logo-main.png"></a>
 
     {{ Menu::placement('main_menu') }}
 
