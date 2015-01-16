@@ -3,9 +3,10 @@
   height: 63px;
   background: #262324;
   border-top: 3px solid white;
-  position: relative;
+  position: absolute;
   min-width: 960px;
   color: white;
+  bottom: 0;
   &:before {
     content: '';
     display: block;
@@ -14,6 +15,7 @@
     height: 3px;
     background: #a2222f;
     margin-top: -6px;
+    top: 0;
   }
   a {
     color: #888;

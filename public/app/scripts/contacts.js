@@ -18,9 +18,9 @@ $(function() {
   
   var bounds = new google.maps.LatLngBounds();
   
-  if ('undefined' === typeof theme_path) {
+  /*if ('undefined' === typeof theme_path) {
     var theme_path = '/';// jshint ignore:line
-  }
+  }*/
   
   var markerIcon = { url: theme_path + '/images/ico-marker.svg'};
   

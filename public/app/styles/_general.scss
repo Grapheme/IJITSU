@@ -180,7 +180,7 @@ body {
       .text {
         display: inline-block;
         width: 516px;
-        vertical-align: middle;
+        vertical-align: top;
         padding-right: 60px;
         padding-left: 60px;
       }
@@ -210,6 +210,24 @@ body {
     &>.holder {
       padding-bottom: 20px;
     }
+  }
+}
+
+.r404-wrapper {
+  text-align: center;
+  position: relative;
+  min-height: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  .h {
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .r404 {
+    display: inline-block;
+    vertical-align: middle;
   }
 }
 
