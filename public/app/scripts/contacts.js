@@ -16,6 +16,10 @@ $(function() {
   
   var bounds = new google.maps.LatLngBounds();
   
+  if ('undefined' === typeof theme_path) {
+    var theme_path = '/'
+  }
+  
   var markerIcon = { url: theme_path + '/images/ico-marker.svg'};
   
   var mapOptions = {
