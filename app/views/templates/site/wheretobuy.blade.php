@@ -57,8 +57,8 @@ foreach ($dealers as $dealer) {
     }
 
     $dealers_json[] = array(
-        "lat" => 48.015883,
-        "lng" => 37.80285,
+        "lat" => $dealer->lat,
+        "lng" => $dealer->lng,
         "text" => "<strong>" . $dealer->city . "</strong> <br>" . $dealer->address . "<br> " . $dealer->organization . " <br>" . $dealer->phones . " <br>" . implode(', ', $emails)
     );
 }
