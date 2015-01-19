@@ -68,7 +68,7 @@ unset($temp);
 
     <div class="content col-2">
         <div class="holder">
-            <h1>Отличайся выгодно</h1>
+            <h1>{{ $page->block('block-1', 'name') }}</h1>
 
             <div class="col">
 
@@ -98,7 +98,7 @@ unset($temp);
 </svg>
 
                 </div>
-                <h2>Качество</h2>
+                <h2>{{ $page->block('block-2_col-1', 'name') }}</h2>
 
                 <p>
 
@@ -145,7 +145,7 @@ unset($temp);
 </svg>
 
                 </div>
-                <h2>Стиль</h2>
+                <h2>{{ $page->block('block-2_col-2', 'name') }}</h2>
 
                 <p>
 
@@ -167,7 +167,7 @@ unset($temp);
 </svg>
 
                 </div>
-                <h2>Выгода</h2>
+                <h2>{{ $page->block('block-2_col-3', 'name') }}</h2>
 
                 <p>
 
