@@ -207,9 +207,9 @@ unset($temp);
                     <div style="background-image:url('{{ $image->full() }}');" class="visual"></div>
                     <div class="shadow"></div>
                     <h2>{{ $wheel->name }}</h2>
-                </a>
+                </a><!--
                 @endforeach
-            </div>
+            --></div>
         </div>
     </div>
     @endif
