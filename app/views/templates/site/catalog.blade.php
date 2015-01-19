@@ -72,109 +72,119 @@ unset($temp);
 
     {{ $page->block('fader') }}
 
-    @if (is_object($wheels) && $wheels->count()))
-    <div class="content col-4">
-        <div class="holder">
-            <h1>Каталог</h1>
-            <div class="wrapper">
-                <!--
-                @foreach ($wheels as $wheel)
-                    <?
-                    if (!isset($wheels_images[$wheel->id]) || !count($wheels_images[$wheel->id]))
-                        continue;
-
-                    $colors_images = array();
-                    $colors_text = array();
-                    $image_thumb = '';
-                    $image_full = '';
-                    foreach ($wheels_images[$wheel->id] as $img) {
-                        if (!is_object($img->image)) {
-                            $colors_text[$img->id] = $img->name;
-                            continue;
-                        }
-
-                        $colors_images[$img->id] = $img;
-
-                        if (!$image_thumb) {
-                            $image_thumb = $img->image->thumb();
-                            $image_full = $img->image->full();
-                        }
-                    }
-
-                    $models = array();
-                    $temp = explode("\n", $wheel->models . "\n");
-                    if (count($temp)) {
-                        foreach ($temp as $model) {
-                            $model = trim($model);
-                            if (!$model)
+    @if (is_object($wheels) && $wheels->count())
+        <?
+        $wheels2 = clone $wheels;
+        $wheels_parts = array_chunk($wheels2->toArray(), 4);
+        #Helper::tad($wheels_parts);
+        ?>
+        @foreach($wheels_parts as $w => $wheels_part)
+            <div class="content col-4">
+                <div class="holder">
+                    @if ($w == 0)
+                    <h1>Каталог</h1>
+                    @endif
+                        <!--
+                        @foreach ($wheels_part as $wheel_arr)
+                            <?
+                            $wheel = $wheels[$wheel_arr['id']];
+                            if (!isset($wheels_images[$wheel->id]) || !count($wheels_images[$wheel->id]))
                                 continue;
-                            $first_letter = mb_substr($model, 0, 1);
-                            if (!isset($models[$first_letter]))
-                                $models[$first_letter] = array();
-                            $models[$first_letter][] = $model;
-                        }
-                    }
-                    ?>
-                --><a id="id-{{ $wheel->id }}" name="id-{{ $wheel->id }}" href="" class="col">
-                    <div style="background-image:url('{{ $image_thumb }}');" class="visual"></div>
-                    <div class="shadow"></div>
-                    <h2>{{ $wheel->name }}</h2>
-                    <div class="detail">
-                        <div class="holder"><img src="{{ Config::get('site.theme_path') }}/images/ico-cross.png" class="close">
-                            <h2>{{ $wheel->name }}</h2>
-                            <div class="left">
-                                <div class="visual">
-                                    <div style="background-image:url('{{ $image_thumb }}');" class="show"></div>
-                                    <img src="{{ Config::get('site.theme_path') }}/images/decor-shadow-big.png" class="shadow">
-                                </div>
-                            </div>
-                            <div class="right">
-                                @if (count($colors_images))
-                                <h2>Цвета</h2>
-                                <div class="colors">
-                                    @foreach ($colors_images as $color)
-                                    <div data-big-img="{{ $color->image->full() }}" class="unit">
-                                        <div style="background-image:url('{{ $color->image->thumb() }}');" class="visual"></div>
-                                        <div class="title">{{ $color->name }}</div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                                @endif
 
-                                @if (count($colors_text))
-                                <h2>Другие цвета</h2>
-                                <div class="other-color">{{ implode(', ', $colors_text) }}</div>
-                                @endif
+                            $colors_images = array();
+                            $colors_text = array();
+                            $image_thumb = '';
+                            $image_full = '';
+                            foreach ($wheels_images[$wheel->id] as $img) {
+                                if (!is_object($img->image)) {
+                                    $colors_text[$img->id] = $img->name;
+                                    continue;
+                                }
 
-                                @if (count($models))
-                                <h2>Модели</h2>
-                                <div class="models">
-                                    <div class="left">
-                                        @foreach ($models as $letter => $mdls)
-                                        <div class="letter-holder">
-                                            <div class="letter">{{ $letter }}</div>
-                                            <div class="car-holder">
-                                                @foreach ($mdls as $model)
-                                                    <div class="car">{{ $model }}</div>
-                                                @endforeach
+                                $colors_images[$img->id] = $img;
+
+                                if (!$image_thumb) {
+                                    $image_thumb = $img->image->thumb();
+                                    $image_full = $img->image->full();
+                                }
+                            }
+
+                            $models = array();
+                            $temp = explode("\n", $wheel->models . "\n");
+                            if (count($temp)) {
+                                foreach ($temp as $model) {
+                                    $model = trim($model);
+                                    if (!$model)
+                                        continue;
+                                    $first_letter = mb_substr($model, 0, 1);
+                                    if (!isset($models[$first_letter]))
+                                        $models[$first_letter] = array();
+                                    $models[$first_letter][] = $model;
+                                }
+                            }
+                            ?>
+                            --><div class="wrapper">
+                                <a id="id-{{ $wheel->id }}" name="id-{{ $wheel->id }}" href="" class="col">
+                                <div style="background-image:url('{{ $image_thumb }}');" class="visual"></div>
+                                <div class="shadow"></div>
+                                <h2>{{ $wheel->name }}</h2>
+                                <div class="detail">
+                                    <div class="holder"><img src="{{ Config::get('site.theme_path') }}/images/ico-cross.png" class="close">
+                                        <h2>{{ $wheel->name }}</h2>
+                                        <div class="left">
+                                            <div class="visual">
+                                                <div style="background-image:url('{{ $image_thumb }}');" class="show"></div>
+                                                <img src="{{ Config::get('site.theme_path') }}/images/decor-shadow-big.png" class="shadow">
                                             </div>
                                         </div>
-                                        @endforeach
-                                    </div>
-                                    <div class="clrfx"></div>
-                                </div>
-                                @endif
+                                        <div class="right">
+                                            @if (count($colors_images))
+                                            <h2>Цвета</h2>
+                                            <div class="colors">
+                                                @foreach ($colors_images as $color)
+                                                <div data-big-img="{{ $color->image->full() }}" class="unit">
+                                                    <div style="background-image:url('{{ $color->image->thumb() }}');" class="visual"></div>
+                                                    <div class="title">{{ $color->name }}</div>
+                                                </div>
+                                                @endforeach
+                                            </div>
+                                            @endif
 
-                            </div>
-                            <div class="clrfx"></div>
-                        </div>
-                    </div>
-                </a><!--
-                @endforeach
-                -->
+                                            @if (count($colors_text))
+                                            <h2>Другие цвета</h2>
+                                            <div class="other-color">{{ implode(', ', $colors_text) }}</div>
+                                            @endif
+
+                                            @if (count($models))
+                                            <h2>Модели</h2>
+                                            <div class="models">
+                                                <div class="left">
+                                                    @foreach ($models as $letter => $mdls)
+                                                    <div class="letter-holder">
+                                                        <div class="letter">{{ $letter }}</div>
+                                                        <div class="car-holder">
+                                                            @foreach ($mdls as $model)
+                                                                <div class="car">{{ $model }}</div>
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                    @endforeach
+                                                </div>
+                                                <div class="clrfx"></div>
+                                            </div>
+                                            @endif
+
+                                        </div>
+                                        <div class="clrfx"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div><!--
+                    @endforeach
+                    -->
+                </div>
             </div>
-        </div>
-    </div>
+        @endforeach
     @endif
     <div class="mark"></div>
     <div class="detail-view"></div>
