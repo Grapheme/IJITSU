@@ -27,7 +27,8 @@ $(function() {
   var mapOptions = {
       zoom: 16,
       disableDefaultUI: true,
-      navigationControl: false,
+      navigationControl: true,
+      scrollwheel: false,
       //center: new google.maps.LatLng(47.2333330,39.7000000),
       mapTypeControl: false,
       streetViewControl: false,
