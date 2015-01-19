@@ -9,6 +9,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>@yield('title')</title>
+        <link rel="icon" type="image/png" href="{{ Config::get('site.theme_path') }}/images/favicon.png">
         <meta name="description" content="@yield('description')">
         <meta name="keywords" content="@yield('keywords')">
 
