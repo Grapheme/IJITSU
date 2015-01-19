@@ -152,6 +152,11 @@ body {
               border-bottom: 3px solid #a2222f;
             }
           }
+          &.active {
+            h2 {
+              border-bottom: 3px solid #a2222f;
+            }
+          }
         }
       }
       @include max-screen(1260px) {

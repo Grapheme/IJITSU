@@ -37,8 +37,10 @@ $(function() {
   
   if (document.getElementById('contacts-map')) {
     var map = new google.maps.Map(document.getElementById('contacts-map'), mapOptions);
-  
+    var infowindow = new google.maps.InfoWindow();
+    
     var jsonUrl = $('#contacts-map').attr('data-json');
+    
     $.each(_IJITSU_.map_json, function(index, value){
       setTimeout(function() {
         var marker = new google.maps.Marker({
@@ -52,6 +54,7 @@ $(function() {
         });
         
         google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent('<div class="iwinow">' + value.text + '</div>');
           infowindow.open(map, marker);
         });
         bounds.extend(marker.position);
