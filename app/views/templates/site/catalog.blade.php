@@ -84,7 +84,7 @@ unset($temp);
                     @if ($w == 0)
                     <h1>Каталог</h1>
                     @endif
-                        <!--
+                    <div class="wrapper">
                         @foreach ($wheels_part as $wheel_arr)
                             <?
                             $wheel = $wheels[$wheel_arr['id']];
@@ -123,7 +123,6 @@ unset($temp);
                                 }
                             }
                             ?>
-                            --><div class="wrapper">
                                 <a id="id-{{ $wheel->id }}" name="id-{{ $wheel->id }}" href="" class="col">
                                 <div style="background-image:url('{{ $image_thumb }}');" class="visual"></div>
                                 <div class="shadow"></div>
@@ -179,9 +178,8 @@ unset($temp);
                                     </div>
                                 </div>
                             </a>
-                        </div><!--
                     @endforeach
-                    -->
+                    </div>
                 </div>
             </div>
         @endforeach
