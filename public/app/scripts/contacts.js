@@ -42,7 +42,7 @@ $(function() {
     var jsonUrl = $('#contacts-map').attr('data-json');
     
     $.each(_IJITSU_.map_json, function(index, value){
-      setTimeout(function() {
+      //setTimeout(function() {
         var marker = new google.maps.Marker({
           position: new google.maps.LatLng(value.lat, value.lng),
           map: map,
@@ -55,11 +55,11 @@ $(function() {
         
         google.maps.event.addListener(marker, 'click', function() {
           infowindow.setContent('<div class="iwinow">' + value.text + '</div>');
-          infowindow.open(map, marker);
+          infowindow.open(map, this);
         });
         bounds.extend(marker.position);
         map.fitBounds(bounds);
-      }, index * 300);
+      //}, index * 300);
     });
   }
   
