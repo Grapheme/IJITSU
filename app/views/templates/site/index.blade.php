@@ -192,9 +192,8 @@ unset($temp);
         <div class="holder">
             <h1>Наши лучшие модели</h1>
 
-            <div class="wrapper">
-
-                @foreach ($wheels as $wheel)
+            <div class="wrapper"><!--
+                @foreach ($wheels as $wheel) 
                     <?
                         if (!@$wheels_images[$wheel->id])
                             continue;
@@ -203,7 +202,7 @@ unset($temp);
                             continue;
                         $image = $image->image;
                     ?>
-                <a href="{{ URL::route('page', 'catalog') }}#id-{{ $wheel->id }}" class="col">
+                --><a href="{{ URL::route('page', 'catalog') }}#id-{{ $wheel->id }}" class="col">
                     <div style="background-image:url('{{ $image->full() }}');" class="visual"></div>
                     <div class="shadow"></div>
                     <h2>{{ $wheel->name }}</h2>
