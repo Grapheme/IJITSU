@@ -46,11 +46,8 @@ $(function() {
         var marker = new google.maps.Marker({
           position: new google.maps.LatLng(value.lat, value.lng),
           map: map,
-          animation: google.maps.Animation.DROP,
+          //animation: google.maps.Animation.DROP,
           icon: markerIcon,
-        });
-        var infowindow = new google.maps.InfoWindow({
-          content: '<div class="iwinow">' + value.text + '</div>'
         });
         
         google.maps.event.addListener(marker, 'click', function() {
