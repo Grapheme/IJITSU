@@ -20,7 +20,7 @@
 
     <div class="content col-2">
         <div class="holder">
-            <h1>Об IJITSU</h1>
+            <h1>{{ $page->block('about', 'name') }}</h1>
             <div class="col">
 
                 {{ $page->block('about') }}
@@ -31,7 +31,7 @@
     <div class="content visual-left red-bg">
         <div class="holder"><img src="{{ Config::get('site.theme_path') }}/images/decor-certificate.png" class="visual">
             <div class="text">
-                <h2>Производство</h2>
+                <h2>{{ $page->block('toyota', 'name') }}</h2>
 
                 {{ $page->block('toyota') }}
 
@@ -40,7 +40,7 @@
     </div>
     <div class="content col-2">
         <div class="holder">
-            <h1>Производство</h1>
+            <h1>{{ $page->block('production', 'name') }}</h1>
             <div class="col">
 
                 {{ $page->block('production') }}
@@ -50,10 +50,10 @@
     </div>
     <div class="content col-2">
         <div class="holder">
-            <h1>Стандарт VIA</h1>
+            <h1>{{ $page->block('via', 'name') }}</h1>
             <div class="col">
 
-                {{ $page->block('about') }}
+                {{ $page->block('via') }}
 
             </div>
         </div>
