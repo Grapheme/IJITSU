@@ -17,6 +17,7 @@ body.contacts {
           .unit {
             line-height: 23px;
             margin-bottom: 23px;
+            font-size: 16px;
           }
         }
         @include max-screen(1240px) {
