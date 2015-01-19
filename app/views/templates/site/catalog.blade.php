@@ -184,10 +184,10 @@ unset($temp);
                     </div>
                 </div>
             </div>
+            <div class="mark"></div>
+            <div class="detail-view"></div>
         @endforeach
     @endif
-    <div class="mark"></div>
-    <div class="detail-view"></div>
 
 @stop
 
