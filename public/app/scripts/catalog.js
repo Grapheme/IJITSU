@@ -79,7 +79,7 @@ $(function() {
   
   if(hash) {
     if (hash.split('-')[0]==='#id') {
-      var $unit = $(hash);
+      var $unit = $(hash).closest('a.col');
       $unit.click();
       $unit.blur();
     }

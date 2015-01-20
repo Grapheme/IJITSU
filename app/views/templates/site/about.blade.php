@@ -46,10 +46,6 @@
                 {{ $page->block('production') }}
 
             </div>
-        </div>
-    </div>
-    <div class="content col-2">
-        <div class="holder">
             <h1>{{ $page->block('via', 'name') }}</h1>
             <div class="col">
 
