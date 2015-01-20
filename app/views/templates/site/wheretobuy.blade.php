@@ -115,7 +115,7 @@ unset($emails);
                     {{ $dealer->phones }} <br>
                     @if (count($emails))
                         @foreach ($emails as $email)
-                            <a href='{{ mb_strpos($email, '@', 1) ? 'mailto:' : (mb_substr($email, 0, 7) != 'http://' ? 'http://' : '') }}{{ $email }}'>{{ $email }}</a>
+                            <a href='{{ mb_strpos($email, '@', 1) ? 'mailto:' : (mb_substr($email, 0, 7) != 'http://' ? 'http://' : '') }}{{ $email }}'>{{ $email }}</a><br/>
                         @endforeach
                     @endif
                 </div>
