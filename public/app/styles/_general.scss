@@ -1,6 +1,25 @@
 body {
   background-image: url("../images/bg-tilt-lines.png");
 }
+a.link {
+  color: #a7252f;
+  font-family: 'latolight';
+  font-size: 18px;
+  border-bottom: 1px solid;
+  text-decoration: none;
+  position: relative;
+  z-index: 100;
+  &:hover {
+    border: none;
+    text-decoration: none;
+  }
+  &[target="_blank"] {
+    &:after {
+      content: url('../images/ico-ext-link.svg');
+      margin: 0 0 0 5px;
+    }
+  }
+}
 .iwinow {
   line-height: 1.35;
   overflow: hidden;

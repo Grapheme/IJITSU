@@ -209,6 +209,7 @@ unset($temp);
                 </a><!--
                 @endforeach
             --></div>
+            <a href="/catalog/" class="link">Все модели</a>
         </div>
     </div>
     @endif

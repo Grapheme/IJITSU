@@ -4,10 +4,10 @@
 @import "../../bower_components/sass-mediaqueries/_media-queries.scss";
 // endbower
 
-* {
+/** {
  -webkit-font-smoothing: antialiased;
  -moz-osx-font-smoothing: grayscale;
-}
+}*/
 
 html, body {
   min-width: 960px;
