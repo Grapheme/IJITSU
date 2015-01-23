@@ -82,7 +82,7 @@ unset($emails);
     <div class="content col-2 mini-padding">
         <div class="holder">
             <h1>Официальные дилеры</h1>
-            <a href="http://virbactd.ru/contacts/" target="_blank" class="link opt">Оптовые точки продаж</a>
+            <a href="http://virbactd.ru/wheels/cars/" target="_blank" class="link opt">Оптовые точки продаж</a>
         </div>
     </div>
     <div id="contacts-map" data-json="/json/contacts-map.json"></div>
