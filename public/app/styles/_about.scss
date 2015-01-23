@@ -5,16 +5,17 @@ body.about {
       &>.holder {
         padding-bottom: 12px;
         .visual {
-          width: 255px;
+          width: 323px;
           margin-left: 100px;
           margin-right: 112px;
           vertical-align: top;
-          position: relative;
-          top: -36px;
+          position: relative;          
+          top: -56px;
+          margin-bottom: -110px;
         }
         .text {
           display: inline-block;
-          width: 688px;
+          width: 608px;
           vertical-align: top;
           margin-top: 40px;
         }
@@ -24,7 +25,7 @@ body.about {
             margin-left: 0;
           }
           .text {
-            width: 528px;
+            width: 448px;
           }
         }
       }

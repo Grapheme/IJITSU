@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="content visual-left red-bg">
-        <div class="holder"><img src="{{ Config::get('site.theme_path') }}/images/decor-certificate.png" class="visual">
+        <div class="holder"><img src="{{ Config::get('site.theme_path') }}/images/decor-certificate.jpg" class="visual">
             <div class="text">
                 <h2>{{ $page->block('toyota', 'name') }}</h2>
 
