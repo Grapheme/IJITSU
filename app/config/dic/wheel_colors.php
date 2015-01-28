@@ -30,6 +30,10 @@ return array(
                 'title' => 'Изображение',
                 'type' => 'image',
             ),
+            'models' => array(
+                'title' => 'Модели',
+                'type' => 'textarea',
+            ),
         );
     },
 

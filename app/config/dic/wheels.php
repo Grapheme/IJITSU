@@ -5,10 +5,6 @@ return array(
     'fields' => function() {
 
         return array(
-            'models' => array(
-                'title' => 'Модели',
-                'type' => 'textarea',
-            ),
             'show_on_main' => array(
                 'title' => 'Выводить на главной',
                 'type' => 'checkbox',
