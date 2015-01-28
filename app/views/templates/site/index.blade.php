@@ -19,7 +19,7 @@ $wheels = DicVal::extracts($wheels, null, 1, 1);
 /**
  * ..и их ID
  */
-$wheels_ids = Dic::makeLists($wheels, null, 'id');
+$wheels_ids = (array)Dic::makeLists($wheels, null, 'id');
 #Helper::tad($wheels_ids);
 
 /**
@@ -28,7 +28,9 @@ $wheels_ids = Dic::makeLists($wheels, null, 'id');
 $wheels_images = Dic::valuesBySlug('wheel_colors', function($query) use ($wheels_ids){
 
     $tbl1 = $query->join_field('wheel_id', null);
-    $query->whereIn($tbl1.'.value', $wheels_ids);
+
+    if (count($wheels_ids))
+        $query->whereIn($tbl1.'.value', $wheels_ids);
 
     $query->orderBy('lft');
 });
