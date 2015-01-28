@@ -165,7 +165,7 @@ unset($temp);
                                                     <div class="left">
                                                         @foreach ($models as $letter => $mdls)
                                                             <div class="letter-holder">
-                                                                <div class="letter">{{-- $letter --}}</div>
+                                                                <!--<div class="letter">{{ $letter }}</div>-->
                                                                 <div class="car-holder">
                                                                     @foreach ($mdls as $model)
                                                                         <div class="car">{{ $model }}</div>
