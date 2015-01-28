@@ -39,11 +39,14 @@ $(function() {
           $bigImg.removeClass('show');
           $(this).addClass('active');
           var src = $(this).attr('data-big-img');
+          var id = $(this).attr('data-color-id');
           $('<img src="'+src+'">').load(function(){
             $bigImg.css({
               'background-image':'url('+src+')'
             }).addClass('show');
           });
+          $detailContainer.find('.models').slideUp();
+          $detailContainer.find('.models-'+id).slideDown();
         });
         
         $colors.eq(0).click();

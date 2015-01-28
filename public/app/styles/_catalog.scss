@@ -107,6 +107,7 @@
           margin-bottom: 66px;
         }
         .models {
+          display: none;
           .left {
             margin-right: 0 !important;  
             @include column-count(2);  
